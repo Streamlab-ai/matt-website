@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most Leaders Are Executing Against a Definition of Success They Never Consciously Chose — Matt Krall</title>
+  <meta name="description" content="Why inherited ambition creates misalignment — and why conscious authorship is the beginning of real change.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    :root {
+      --cream:       #FAF9F6;
+      --cream-mid:   #F3F0EA;
+      --cream-dark:  #EAE6DD;
+      --ink:         #1A1A18;
+      --charcoal:    #1E2527;
+      --slate:       #555550;
+      --slate-light: #8A8A82;
+      --green:       #2A5A43;
+      --amber:       #B8833E;
+      --rule:        #DDD9D0;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .wrap--wide {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: 64px;
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 40px;
+    }
+    .nav__brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .nav__back {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav__back::before { content: '←'; }
+    .nav__back:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn--dark {
+      background-color: var(--charcoal);
+      color: var(--cream);
+    }
+    .btn--dark:hover { background-color: #111618; }
+
+    .article-header {
+      padding-top: 64px;
+      background-color: var(--charcoal);
+      padding-bottom: 80px;
+    }
+    .article-header__inner {
+      padding-top: 72px;
+    }
+    .article-header__category {
+      display: block;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 28px;
+    }
+    .article-header__title {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+    .article-header__subtitle {
+      font-size: 1.0625rem;
+      color: rgba(250,249,246,0.60);
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 540px;
+      margin-bottom: 40px;
+    }
+    .article-header__byline {
+      font-size: 0.78rem;
+      color: rgba(250,249,246,0.35);
+      letter-spacing: 0.05em;
+    }
+
+    .article-body {
+      padding: 80px 0 100px;
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      color: var(--slate);
+      line-height: 1.9;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .article-body p:first-child {
+      font-size: 1.125rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+    .article-body h2 {
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+      color: var(--ink);
+      margin: 56px 0 20px;
+      line-height: 1.25;
+    }
+    .article-body strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-style: italic;
+      color: var(--ink);
+      border-left: 3px solid var(--amber);
+      padding: 4px 0 4px 28px;
+      margin: 48px 0;
+      line-height: 1.6;
+    }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 56px 0;
+    }
+
+    .article-cta {
+      background-color: var(--cream-mid);
+      border-top: 1px solid var(--rule);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .article-cta__label {
+      display: block;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .article-cta__headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: var(--ink);
+      line-height: 1.22;
+      margin-bottom: 16px;
+    }
+    .article-cta__support {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.75;
+      max-width: 440px;
+      margin: 0 auto 36px;
+      font-weight: 300;
+    }
+    .article-cta__note {
+      margin-top: 14px;
+      font-size: 0.75rem;
+      color: var(--slate-light);
+      font-style: italic;
+    }
+
+    .footer {
+      background-color: var(--charcoal);
+      padding: 40px 0;
+    }
+    .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer__brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .footer__copy {
+      font-size: 0.7rem;
+      color: rgba(250,249,246,0.22);
+    }
+
+    @media (max-width: 768px) {
+      .nav__inner { padding: 0 24px; }
+      .wrap { padding: 0 24px; }
+      .wrap--wide { padding: 0 24px; }
+      .article-header__inner { padding-top: 56px; }
+      .footer__inner { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner wrap--wide">
+      <a href="../index.html" class="nav__brand">Matt Krall</a>
+      <a href="../index.html#writing" class="nav__back">Writing</a>
+    </div>
+  </nav>
+
+
+  <header class="article-header">
+    <div class="wrap article-header__inner">
+      <span class="article-header__category">Leadership Identity &amp; Alignment</span>
+      <h1 class="article-header__title">Most Leaders Are Executing Against a Definition of Success They Never Consciously Chose</h1>
+      <p class="article-header__subtitle">Why inherited ambition creates misalignment — and why conscious authorship is the beginning of real change.</p>
+      <span class="article-header__byline">By Matt Krall &nbsp;·&nbsp; Founder, Elevate You</span>
+    </div>
+  </header>
+
+
+  <article class="article-body">
+    <div class="wrap">
+
+      <p>There's a moment in many leadership careers that doesn't get talked about openly. It doesn't show up in case studies. It's not something people tend to share on stage. And yet, when it happens, it's unmistakable.</p>
+
+      <p>It's the moment when you realize that the thing you've been working toward — the thing you've measured yourself against, compared yourself by, pushed yourself to achieve — doesn't feel the way you thought it would.</p>
+
+      <p>Not because you failed.</p>
+
+      <p>Because you didn't.</p>
+
+      <p>I remember mine clearly.</p>
+
+      <p>I was about twelve months into a President role. We had just closed the year at 48% above plan. To put that in context, in the previous thirty years, the best the organization had ever done was 4.3% above plan.</p>
+
+      <p>By every external measure, this was a defining success.</p>
+
+      <p>And yet I was sitting in the year-end board meeting, listening to the reaction, and something didn't line up. The response was… neutral. Almost procedural. As if what had just happened was expected. Routine.</p>
+
+      <p>I remember feeling confused more than anything else.</p>
+
+      <p>Because at the same time, inside the organization, I was seeing something very different. The legacy team — the people who had been there for years — were going through the motions. Some were guarded. Some were defensive. The newer team members, the ones who had leaned into the changes, were looking for recognition. Deservedly so. They had carried a lot.</p>
+
+      <p>We had outperformed the number in a historic way. And yet the culture felt fragmented.</p>
+
+      <p>I found myself asking a question I hadn't had to ask before: if this is success… why doesn't it feel like it?</p>
+
+      <blockquote class="pull-quote">"I hadn't authored it. I had executed against it."</blockquote>
+
+      <h2>The Definition You Inherit Without Realizing It</h2>
+
+      <p>Most high-performing leaders don't consciously choose their definition of success. They inherit it.</p>
+
+      <p>It gets shaped early — by school, by early wins, by environments that reward measurable achievement. It gets reinforced by promotions, compensation, titles, and the subtle but constant comparison to the people around you. Are you advancing? Are you keeping pace? Are you winning relative to your peers?</p>
+
+      <p>I was no different. For years, I had measured progress in ways that were easy to track and easy to compare. Promotions. Scope. Compensation. Title. I would look externally — at schoolmates, at others in similar roles — and use that as a quiet scoreboard.</p>
+
+      <p>Not in a way that blamed the organizations I worked in. This was an assessment of me. I had accepted a definition of success that was visible, rewarded, and easy to measure, and I kept executing against it because it gave me a way to know I was doing well.</p>
+
+      <p>Until you reach a point where the scoreboard says you're winning… and something in you doesn't agree.</p>
+
+      <h2>When Achievement Outruns Alignment</h2>
+
+      <p>What I was experiencing in that moment wasn't burnout. It wasn't a lack of capability. It was misalignment.</p>
+
+      <p>I had achieved a role that represented success in every external sense. But I hadn't stopped to ask a more fundamental question: successful by whose definition?</p>
+
+      <p>Because the truth is, I hadn't authored it. I had executed against it. And there's a difference.</p>
+
+      <p>When you're executing against an inherited definition of success, the path is clear. You know what to do. You know how to measure progress. You know how to prove you're moving in the right direction. But there's a cost that doesn't show up on the scoreboard.</p>
+
+      <p>Over time, you start to feel a subtle form of dissonance: you push harder, but it doesn't create more clarity. You achieve more, but it doesn't feel more meaningful. You stay busy, but you feel slightly disconnected from the work itself. You solve for performance, but something underneath it remains unresolved.</p>
+
+      <p>It's not loud. It's not dramatic. But it's persistent. And most leaders try to solve it the only way they know how. They push harder.</p>
+
+      <blockquote class="pull-quote">"The scoreboard says you're winning, and something in you doesn't agree."</blockquote>
+
+      <h2>Why High Performers Miss This</h2>
+
+      <p>High performers are particularly susceptible to this pattern. Because the very behaviors that help you succeed early — drive, discipline, responsiveness, a willingness to take on more — also make it easy to continue executing without questioning the system you're executing within.</p>
+
+      <p>You don't stop to redefine success. You just get better at achieving it.</p>
+
+      <p>Until one day, you realize you've built a life, a role, or a leadership identity around a definition that was never fully yours. And by that point, you're very good at maintaining it.</p>
+
+      <h2>The Moment Everything Shifted</h2>
+
+      <p>For me, the shift didn't come from a new strategy. It came from a decision.</p>
+
+      <p>Sitting in that tension — between the numbers and the reality of the culture — I realized something I hadn't been willing to see clearly: I was still orienting my leadership, in part, around what I thought others expected of me. The board. My boss. The invisible standards that come with a role like that. And as long as that was true, I would keep optimizing for the wrong thing.</p>
+
+      <p>So I made a change. I stopped trying to anticipate what the board wanted to hear. I shared the direction I believed we needed to go. I asked for input. There wasn't much. And that told me something important: clarity wasn't going to come from outside. It had to come from me.</p>
+
+      <p>So I turned back to the organization and made it explicit: the values we hold are the standard. And we will uphold that standard as our first priority. Not the number. Not the optics. The way we operate. Including how I showed up.</p>
+
+      <h2>From Achievement to Authorship</h2>
+
+      <p>That shift — from achievement to authorship — is subtle, but it changes everything.</p>
+
+      <p>Achievement is about proving you can meet a defined standard. Authorship is about deciding what the standard is.</p>
+
+      <p>When you're operating from achievement, your energy is directed outward: how am I performing? How am I being evaluated? How do I compare? When you move into authorship, the orientation changes: what do I actually believe matters here? What kind of culture are we building? What am I reinforcing through how I show up — especially under pressure?</p>
+
+      <p>It's a different level of responsibility. Because once you author the definition, you can't hide behind it.</p>
+
+      <h2>The Hidden Cost of Misaligned Success</h2>
+
+      <p>When leaders operate against a definition of success they haven't consciously chosen, it shows up in predictable ways.</p>
+
+      <p><strong>Overfunctioning.</strong> Taking on more than they should because it feels like that's what success requires.</p>
+
+      <p><strong>Control.</strong> Holding things tightly because outcomes feel like a personal referendum.</p>
+
+      <p><strong>Burnout.</strong> Not always from volume, but from the friction of operating out of alignment.</p>
+
+      <p>And perhaps most importantly, a quiet sense of disconnection — from the work, from the team, and sometimes from themselves. None of this is a capability issue. It's an authorship issue.</p>
+
+      <hr class="article-divider">
+
+      <h2>A Different Starting Point</h2>
+
+      <p>The work isn't to abandon ambition. It's to examine it.</p>
+
+      <p>To ask, honestly: where did my definition of success come from? What parts of it are actually mine? And what parts have I been carrying without ever choosing?</p>
+
+      <p>Because until that question is answered, even meaningful achievement can feel hollow. Not because it lacks value. But because it lacks alignment.</p>
+
+      <p>Most leaders don't need more drive. They don't need more goals. They don't need another external benchmark. What they need is clarity.</p>
+
+      <p>Clarity about what they are actually building. Clarity about how they define success — not in theory, but in practice. Clarity about whether the way they are leading is aligned with what they say matters most.</p>
+
+      <p>Because once that clarity is in place, something shifts. The work becomes more intentional. The pressure becomes more grounded. And success — when it comes — feels different. Not because it's bigger. But because it's yours.</p>
+
+      <p>If any part of this feels familiar — if you've achieved what you set out to achieve and still find yourself asking quiet questions you can't fully answer — it may be worth stepping back long enough to examine the definition you've been executing against.</p>
+
+      <p>That's where the real work begins.</p>
+
+    </div>
+  </article>
+
+
+  <section class="article-cta">
+    <div class="wrap">
+      <span class="article-cta__label">Request a Clarity Conversation</span>
+      <h2 class="article-cta__headline">If the gap is real, start with clarity.</h2>
+      <p class="article-cta__support">A structured diagnostic conversation designed to surface what is actually in the way — specifically, calmly, and without performance.</p>
+      <a href="../index.html#clarity-conversation" class="btn btn--dark" style="padding: 16px 44px;">Request a Clarity Conversation</a>
+      <p class="article-cta__note">Not a sales call. Every path starts here.</p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="wrap--wide footer__inner">
+      <a href="../index.html" class="footer__brand">Matt Krall</a>
+      <p class="footer__copy">© 2026 Matt Krall. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matt Krall — Leadership. Identity. The Transfer of Energy.</title>
-  <meta name="description" content="I help senior operators close the gap between who they intend to be as a leader — and who actually shows up when pressure arrives.">
+  <meta name="description" content="I work with senior executives and operators who know the strategy is sound — and are honest enough to ask why it still breaks down in the moments that matter most.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
@@ -114,7 +114,6 @@
     }
     .connect__icon--green { background-color: var(--green); }
     .connect__icon--amber { background-color: var(--amber); }
-
     .connect__card-text {
       flex: 1;
       display: flex;
@@ -184,7 +183,6 @@
       color: var(--cream);
     }
     .btn--dark:hover { background-color: #111618; }
-
     .btn--outline {
       background-color: transparent;
       color: var(--ink);
@@ -194,14 +192,12 @@
       background-color: var(--ink);
       color: var(--cream);
     }
-
     .btn--ghost {
       background-color: transparent;
       color: var(--cream);
       border: 1px solid rgba(250,249,246,0.35);
     }
     .btn--ghost:hover { border-color: var(--cream); }
-
     .btn--ghost-ink {
       background-color: transparent;
       color: var(--charcoal);
@@ -269,10 +265,8 @@
       transition: color 0.2s;
     }
     .nav__links a:hover { color: var(--ink); }
-
     .nav__cta { font-size: 0.72rem; padding: 10px 22px; }
 
-    /* hamburger — mobile only */
     .nav__burger {
       display: none;
       flex-direction: column;
@@ -290,7 +284,6 @@
       transition: all 0.3s ease;
     }
 
-    /* mobile nav drawer */
     .nav__drawer {
       display: none;
       position: fixed;
@@ -337,7 +330,6 @@
       max-width: 760px;
     }
     .hero__text-inner { max-width: 600px; }
-
     .hero__eyebrow {
       font-size: 0.7rem;
       letter-spacing: 0.14em;
@@ -374,7 +366,6 @@
       color: var(--slate-light);
       font-style: italic;
     }
-
     .hero__image {
       position: absolute;
       right: 0; top: 68px; bottom: 0;
@@ -414,6 +405,15 @@
     }
     .section--dark .section__headline { color: var(--cream); }
 
+    .section__subhead {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-style: italic;
+      color: var(--slate);
+      margin-bottom: 32px;
+      line-height: 1.35;
+    }
+
     .section__intro {
       font-size: 1.0625rem;
       color: var(--slate);
@@ -428,15 +428,12 @@
        THE PROBLEM
     ════════════════════════════════ */
     .problem__opener {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
-      font-style: italic;
-      color: var(--ink);
-      line-height: 1.58;
-      border-left: 3px solid var(--green);
-      padding-left: 28px;
-      margin-bottom: 56px;
+      font-size: 1.0625rem;
+      color: var(--slate);
+      line-height: 1.82;
       max-width: 620px;
+      font-weight: 300;
+      margin-bottom: 40px;
     }
 
     .problem__ifyou {
@@ -483,12 +480,11 @@
        THE SEQUENCE
     ════════════════════════════════ */
     .sequence__setup {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-      font-style: italic;
-      color: rgba(250,249,246,0.78);
-      line-height: 1.65;
+      font-size: 1.0625rem;
+      color: rgba(250,249,246,0.72);
+      line-height: 1.82;
       max-width: 560px;
+      font-weight: 300;
       margin-bottom: 60px;
     }
 
@@ -557,12 +553,8 @@
       display: block;
       min-height: 0;
     }
-    .origin__image img:first-child {
-      object-position: center 20%;
-    }
-    .origin__image img:last-child {
-      object-position: center 15%;
-    }
+    .origin__image img:first-child { object-position: center 20%; }
+    .origin__image img:last-child  { object-position: center 15%; }
 
     .origin__headline {
       font-size: clamp(1.45rem, 2.5vw, 2rem);
@@ -590,113 +582,97 @@
       line-height: 1.6;
     }
 
-    .origin__coaching {
+    .proof-strip {
       margin-top: 40px;
-      padding: 28px 28px 28px 24px;
-      background-color: var(--cream-dark);
-      border-left: 3px solid var(--rule);
+      padding-top: 32px;
+      border-top: 1px solid var(--rule);
     }
-    .origin__coaching p {
-      font-size: 0.9375rem;
+    .proof-strip ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .proof-strip li {
+      font-size: 0.8125rem;
       color: var(--slate);
-      line-height: 1.78;
-      margin-bottom: 16px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .proof-strip li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 1px;
+      background-color: var(--green);
     }
 
 
     /* ════════════════════════════════
-       THE WORK
+       OFFER SECTIONS
     ════════════════════════════════ */
-    .work__header { margin-bottom: 48px; }
-
-    .work__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background-color: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .work__card { background-color: var(--cream-mid); padding: 44px 36px; }
-    .work__card--primary { background-color: var(--charcoal); }
-
-    .work__card-tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin-bottom: 18px;
-      display: block;
-    }
-    .work__card--primary .work__card-tag { color: var(--amber); }
-    .work__card:not(.work__card--primary) .work__card-tag { color: var(--slate-light); }
-
-    .work__card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      line-height: 1.22;
-      margin-bottom: 16px;
-    }
-    .work__card--primary .work__card-name { color: var(--cream); }
-    .work__card:not(.work__card--primary) .work__card-name { color: var(--ink); }
-
-    .work__card-desc {
-      font-size: 0.9375rem;
-      line-height: 1.75;
-      margin-bottom: 28px;
+    .offer__body {
+      font-size: 1.0625rem;
+      line-height: 1.82;
+      max-width: 560px;
       font-weight: 300;
+      margin-bottom: 18px;
     }
-    .work__card--primary .work__card-desc { color: rgba(250,249,246,0.65); }
-    .work__card:not(.work__card--primary) .work__card-desc { color: var(--slate); }
+    .section--dark .offer__body  { color: rgba(250,249,246,0.70); }
+    .section--tinted .offer__body { color: var(--slate); }
 
-    .work__card-list {
+    .offer__list {
       list-style: none;
-      margin-bottom: 32px;
+      margin: 32px 0 40px;
+      max-width: 560px;
     }
-    .work__card-list li {
-      font-size: 0.875rem;
-      line-height: 1.6;
-      padding: 9px 0 9px 18px;
+    .offer__list li {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      padding: 14px 0 14px 24px;
       border-bottom: 1px solid;
       position: relative;
     }
-    .work__card--primary .work__card-list li {
-      color: rgba(250,249,246,0.55);
+    .section--dark .offer__list li {
+      color: rgba(250,249,246,0.60);
       border-color: rgba(250,249,246,0.08);
     }
-    .work__card:not(.work__card--primary) .work__card-list li {
+    .section--tinted .offer__list li {
       color: var(--slate);
       border-color: var(--rule);
     }
-    .work__card-list li::before {
-      content: '—';
+    .offer__list li::before {
+      content: '';
       position: absolute;
       left: 0;
-      opacity: 0.35;
-      font-size: 0.7rem;
-      top: 10px;
+      top: 26px;
+      width: 8px;
+      height: 1px;
+      background-color: var(--amber);
     }
 
-    .work__card-note {
-      font-size: 0.8rem;
+    .offer__note {
+      margin-top: 16px;
+      font-size: 0.77rem;
       font-style: italic;
     }
-    .work__card--primary .work__card-note { color: rgba(250,249,246,0.40); }
-    .work__card:not(.work__card--primary) .work__card-note { color: var(--slate-light); }
+    .section--dark .offer__note  { color: rgba(250,249,246,0.40); }
+    .section--tinted .offer__note { color: var(--slate-light); }
 
-    .work__card-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      color: var(--green);
-      transition: gap 0.2s;
+    .offer__close {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--slate);
+      border-left: 3px solid var(--green);
+      padding-left: 24px;
+      margin-top: 40px;
+      line-height: 1.6;
+      max-width: 540px;
     }
-    .work__card-cta:hover { gap: 10px; }
-    .work__card-cta::after { content: '→'; }
-    .work__card--primary .work__card-cta { color: var(--amber); }
 
 
     /* ════════════════════════════════
@@ -726,6 +702,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 36px;
+      margin-bottom: 56px;
     }
     .proof__pull {
       border-left: 2px solid var(--amber);
@@ -766,6 +743,11 @@
       font-size: 0.77rem;
       color: var(--slate-light);
     }
+    .cta-block__form {
+      margin: 40px auto 0;
+      max-width: 640px;
+      text-align: left;
+    }
 
 
     /* ════════════════════════════════
@@ -795,13 +777,14 @@
       transition: background-color 0.18s;
     }
     .writing__post:hover { background-color: var(--cream-mid); }
+    .writing__post--wide { grid-column: span 2; }
 
-    .writing__post-date {
+    .writing__post-tag {
       display: block;
       font-size: 0.67rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--slate-light);
+      color: var(--green);
       margin-bottom: 14px;
     }
     .writing__post-title {
@@ -816,6 +799,13 @@
       color: var(--slate);
       line-height: 1.65;
       font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .writing__post-read {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 0.03em;
     }
 
     .writing__note {
@@ -839,7 +829,6 @@
       gap: 80px;
       align-items: start;
     }
-
     .bridge__headline {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.4rem, 2.5vw, 1.85rem);
@@ -847,22 +836,12 @@
       line-height: 1.22;
       margin-bottom: 0;
     }
-
     .bridge__body {
       font-size: 0.9375rem;
       color: var(--slate);
       line-height: 1.82;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       font-weight: 300;
-    }
-    .bridge__logo {
-      display: inline-block;
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--green);
-      letter-spacing: 0.03em;
-      margin-top: 24px;
     }
 
 
@@ -892,7 +871,6 @@
       color: rgba(250,249,246,0.35);
       font-style: italic;
     }
-
     .footer__nav {
       list-style: none;
       display: flex;
@@ -906,7 +884,6 @@
       transition: color 0.2s;
     }
     .footer__nav a:hover { color: rgba(250,249,246,0.85); }
-
     .footer__bottom {
       border-top: 1px solid rgba(250,249,246,0.07);
       padding-top: 28px;
@@ -929,9 +906,6 @@
         gap: 48px;
       }
       .origin__image img { height: 360px; }
-
-      .work__grid { grid-template-columns: 1fr; }
-
       .bridge__inner {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -960,13 +934,12 @@
 
       .section { padding: 72px 0; }
 
-      .sequence__steps {
-        grid-template-columns: 1fr;
-      }
+      .sequence__steps { grid-template-columns: 1fr; }
 
       .proof__pulls { grid-template-columns: 1fr; }
 
       .writing__grid { grid-template-columns: 1fr; }
+      .writing__post--wide { grid-column: span 1; }
 
       .footer__top {
         flex-direction: column;
@@ -1006,6 +979,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#the-work">The Work</a></li>
         <li><a href="#writing">Writing</a></li>
+        <li><a href="https://goelevateyou.com" target="_blank" rel="noopener noreferrer">Elevate You</a></li>
       </ul>
 
       <a href="#clarity-conversation" class="btn btn--dark nav__cta">Request a Clarity Conversation</a>
@@ -1022,6 +996,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#the-work">The Work</a></li>
       <li><a href="#writing">Writing</a></li>
+      <li><a href="https://goelevateyou.com" target="_blank" rel="noopener noreferrer">Elevate You</a></li>
       <li><a href="#clarity-conversation">Request a Clarity Conversation</a></li>
     </ul>
   </div>
@@ -1034,8 +1009,8 @@
     <div class="hero__text">
       <div class="hero__text-inner wrap">
         <span class="hero__eyebrow">Leadership. Identity. The Transfer of Energy.</span>
-        <h1 class="hero__headline">Closing the gap between the leader you intend to be and the one who shows up.</h1>
-        <p class="hero__sub">I work with senior executives and operators who know the strategy is sound — and are honest enough to ask why it keeps breaking down under pressure.</p>
+        <h1 class="hero__headline">Closing the gap between the leader you intend to be and the one who shows up under pressure.</h1>
+        <p class="hero__sub">I work with senior executives and operators who know the strategy is sound — and are honest enough to ask why it still breaks down in the moments that matter most.</p>
         <div class="hero__actions">
           <a href="#clarity-conversation" class="btn btn--dark">Request a Clarity Conversation</a>
         </div>
@@ -1056,52 +1031,53 @@
   <section class="section" id="the-problem" aria-labelledby="problem-heading">
     <div class="wrap">
       <span class="label">The Problem</span>
-      <blockquote class="problem__opener">
-        "Right now, somewhere in your organization, it is 2:00 PM on a Tuesday. The strategy is sound. The people are capable. And the pressure is quietly asking a question your last engagement survey will never capture."
-      </blockquote>
+      <h2 class="section__headline" id="problem-heading">The gap is rarely in what you know.</h2>
 
-      <p class="problem__ifyou">If you're feeling like —</p>
-      <ul class="problem__list" id="problem-heading">
-        <li>You're the most capable person in the room — and also the bottleneck.</li>
-        <li>The version of you that shows up under pressure is not the one you intend to be.</li>
-        <li>You've read the books, done the work, and still feel the gap.</li>
-        <li>You're executing against a definition of success you never consciously chose.</li>
-        <li>The fire never actually goes out — it just moves rooms.</li>
+      <p class="problem__opener">Most senior leaders do not need more leadership content. They need a clearer picture of what happens to their standards, their judgment, and their energy when pressure rises.</p>
+
+      <p class="problem__ifyou">If any of this feels familiar, you are not looking at a capability problem:</p>
+      <ul class="problem__list">
+        <li>You are often the most capable person in the room — and still the bottleneck.</li>
+        <li>The version of you that shows up under pressure is not the one you intend to lead from.</li>
+        <li>You have done the reading, the reflection, and the work — and still feel the gap.</li>
+        <li>You are executing against a definition of success you never consciously chose.</li>
+        <li>The fire never really goes out. It just moves rooms.</li>
       </ul>
 
-      <p class="problem__close">"That's not a motivation problem. That's a sequence problem."</p>
-      <a href="#clarity-conversation" class="btn btn--ghost-ink">Let's talk about the gap</a>
+      <p class="problem__close">That is not a motivation problem. It is a sequence problem.</p>
+      <a href="#clarity-conversation" class="arrow-link">Start with clarity</a>
     </div>
   </section>
 
 
   <!-- ══════════════════════════════
-       THE SEQUENCE
+       THE METHOD
   ══════════════════════════════ -->
   <section class="section section--dark" id="the-sequence" aria-labelledby="sequence-heading">
     <div class="wrap">
-      <span class="label label--amber">The Diagnosis</span>
-      <p class="sequence__setup">Most personal development fails not because of weak content — but because of wrong sequence. People jump from desire directly to activation. Without Awareness and Alignment as the foundation, every new behavior collapses the first time real pressure returns.</p>
+      <span class="label label--amber">The Method</span>
+      <h2 class="section__headline" id="sequence-heading">Why change keeps breaking down.</h2>
+      <p class="sequence__setup">Most development fails for one reason: people are asked to activate before they are ready. They try to change behavior before they can clearly see the pattern. They try to sustain standards before those standards are connected to identity. And when the pressure returns, the old default takes over. The sequence matters.</p>
 
-      <div class="sequence__steps" id="sequence-heading" role="list">
+      <div class="sequence__steps" role="list">
         <div class="sequence__step" role="listitem">
           <span class="sequence__step-num">01 — Awareness</span>
           <h3 class="sequence__step-name">See clearly.</h3>
-          <p class="sequence__step-body">Ground yourself without judgment. See the pattern that's been running on autopilot. You cannot change what you cannot see — and you cannot see clearly through judgment.</p>
+          <p class="sequence__step-body">Interrupt autopilot. Name the pattern without judgment. You cannot change what you cannot see.</p>
         </div>
         <div class="sequence__step" role="listitem">
           <span class="sequence__step-num">02 — Alignment</span>
           <h3 class="sequence__step-name">Anchor to identity.</h3>
-          <p class="sequence__step-body">Connect the desired change to who you are becoming. When desire is tied to your values and your core why, the brain doesn't treat it as a goal. It treats it as identity. And identity doesn't deplete.</p>
+          <p class="sequence__step-body">Connect the change to who you are becoming. When the behavior is tied to identity, it stops feeling optional.</p>
         </div>
         <div class="sequence__step" role="listitem">
           <span class="sequence__step-num">03 — Activation</span>
           <h3 class="sequence__step-name">Install, not intend.</h3>
-          <p class="sequence__step-body">Now the micro-practice has somewhere to anchor. Change becomes installed, not intended. Small reps. Compounding results. Behavior anchored to identity holds under pressure.</p>
+          <p class="sequence__step-body">Once the foundation is there, small practices begin to hold. Change becomes repeatable under pressure — not just admirable in theory.</p>
         </div>
       </div>
 
-      <p class="sequence__close">"Skip the sequence, and you're asking people to change behaviors they can't yet see, for reasons that don't yet feel personal."</p>
+      <p class="sequence__close">Skip the sequence, and you end up asking behavior to hold what identity has not yet claimed.</p>
     </div>
   </section>
 
@@ -1120,22 +1096,27 @@
         </div>
 
         <div class="origin__text">
-          <h2 class="origin__headline" id="about-heading">"The 90 Days That Taught Me Leadership Is a Transfer of Energy"</h2>
+          <h2 class="origin__headline" id="about-heading">The 90 days that taught me leadership is a transfer of energy</h2>
 
           <div class="origin__body">
-            <p>In 1999, Capital One handed me a mandate: stand up a brand-new internet servicing center in Seattle. 250 people to hire. 90 days to launch. Other side of the country.</p>
-            <p>I was carrying it the way most ambitious leaders carry their first big mandate — head down, pace up, trying to be the one with the answer in every room. And then a teammate named Jim pulled me aside. Jim was the EF Hutton of the team — didn't say much, but when he spoke, the room leaned in. He told me I had a strong team around me. That they could carry the load if I let them.</p>
+            <p>In 1999, Capital One gave Matt a mandate: stand up a brand-new internet servicing center in Seattle. Hire 250 people. Launch in 90 days. Other side of the country.</p>
+            <p>He carried it the way many ambitious leaders carry their first major mandate — pace up, head down, trying to be the person with the answer in every room. Then a teammate named Jim pulled him aside and told him he had a strong team around him — and that they could carry the load if he let them.</p>
           </div>
 
           <blockquote class="origin__moment">That was the moment. Not a strategy moment. An identity moment.</blockquote>
 
           <div class="origin__body">
-            <p>We hit the launch date. Fully staffed. Within twelve months, Seattle was the highest-performing site in the network. <em>Twenty-five years later, that insight is still the work.</em></p>
+            <p>The site launched fully staffed. Within twelve months, Seattle became the highest-performing site in the network.</p>
+            <p>The deeper lesson lasted longer than the result: under pressure, leadership is not just the transfer of strategy. <em>It is the transfer of energy.</em> Twenty-five years later, that is still the work.</p>
           </div>
 
-          <div class="origin__coaching">
-            <p>Outside of Elevate You, I work with a small number of senior executives in a private 1:1 coaching capacity. Not a program. A relationship. If that is what you are looking for — the Clarity Conversation is where we start.</p>
-            <a href="#clarity-conversation" class="arrow-link">Request a Clarity Conversation</a>
+          <div class="proof-strip">
+            <ul>
+              <li>30+ years leading at the intersection of performance, people, and pressure</li>
+              <li>Former executive: Capital One, GE, Credit One Bank</li>
+              <li>Co-Founder, Elevate You</li>
+              <li>Selective private work with senior executives and operators</li>
+            </ul>
           </div>
         </div>
 
@@ -1145,71 +1126,53 @@
 
 
   <!-- ══════════════════════════════
-       THE WORK
+       PRIMARY OFFER — CLARITY CONVERSATION
   ══════════════════════════════ -->
-  <section class="section section--tinted" id="the-work" aria-labelledby="work-heading">
-    <div class="wrap--wide">
-      <div class="wrap" style="padding: 0;">
-        <span class="label">The Work</span>
-        <div class="work__header">
-          <h2 class="section__headline" id="work-heading">Three ways to work together.</h2>
-          <p class="section__intro">These are not a menu. They are a natural progression — from the most accessible entry point to the most intensive engagement. Every path begins the same way.</p>
-        </div>
-      </div>
-
-      <div class="work__grid" role="list">
-
-        <!-- Clarity Conversation — Primary -->
-        <div class="work__card work__card--primary" role="listitem">
-          <span class="work__card-tag">Primary — Entry Point</span>
-          <h3 class="work__card-name">The Clarity Conversation</h3>
-          <p class="work__card-desc">Before any program, any engagement, any commitment — I offer one thing: a conversation designed to give you clarity on where the real gap is. Whether or not that conversation leads to working together, you will leave with something actionable and specific.</p>
-          <ul class="work__card-list">
-            <li>A structured diagnostic conversation — not a sales call</li>
-            <li>Surfaces the gap between leadership intention and operational results</li>
-            <li>Produces a specific, named insight you can act on immediately</li>
-            <li>No obligation to continue — the value is in the conversation itself</li>
-          </ul>
-          <a href="#clarity-conversation" class="btn btn--ghost" style="font-size: 0.72rem; padding: 12px 22px;">Start a Conversation</a>
-        </div>
-
-        <!-- Inner Game — Secondary -->
-        <div class="work__card" role="listitem">
-          <span class="work__card-tag">Secondary — 1:1 Private Coaching</span>
-          <h3 class="work__card-name">The Inner Game of Leadership</h3>
-          <p class="work__card-desc">For leaders who are ready to go deeper. Private, ongoing coaching built around the inner architecture of high performance — beliefs, patterns, identity, and the gap between who you are and who the situation needs you to be.</p>
-          <ul class="work__card-list">
-            <li>Highly selective 1:1 private coaching engagement</li>
-            <li>Identity-first: Awareness → Alignment → Activation</li>
-            <li>Designed for the leader who knows the next frontier is internal</li>
-          </ul>
-          <p class="work__card-note">"Limited engagements. Starts with a Clarity Conversation."</p>
-        </div>
-
-        <!-- Elevate You — Bridge -->
-        <div class="work__card" role="listitem">
-          <span class="work__card-tag">Organizational — Elevate You</span>
-          <h3 class="work__card-name">Elevate You</h3>
-          <p class="work__card-desc">When the work needs to scale across a team, a division, or an entire organization — Elevate You is the system built to do exactly that. A 48-week behavioral installation program designed to close the Capacity Gap at scale.</p>
-          <ul class="work__card-list">
-            <li>48-week behavioral capacity program for teams and organizations</li>
-            <li>Science-backed, measurable, embedded in the flow of real work</li>
-            <li>The bridge from personal leadership to organizational performance</li>
-          </ul>
-          <a href="https://elevate-you.com" class="work__card-cta" target="_blank" rel="noopener noreferrer">Learn more about Elevate You</a>
-        </div>
-
-      </div>
+  <section class="section section--dark" id="the-work" aria-labelledby="clarity-offer-heading">
+    <div class="wrap">
+      <span class="label label--amber">Primary Offer</span>
+      <h2 class="section__headline" id="clarity-offer-heading">Start with the Clarity Conversation.</h2>
+      <p class="offer__body">Before any engagement, coaching, or recommendation, Matt starts with one thing: a conversation designed to identify where the real gap is. Not the visible symptom. The actual constraint.</p>
+      <p class="offer__body">Whether or not the conversation leads to further work, the person should leave with a sharper understanding of what is happening, why it is happening, and what the next best move is.</p>
+      <ul class="offer__list">
+        <li>Structured diagnostic conversation — not a sales call</li>
+        <li>Surfaces the gap between intention and execution under pressure</li>
+        <li>Produces a specific insight you can act on immediately</li>
+        <li>No obligation to continue — the value is in the clarity</li>
+      </ul>
+      <a href="#clarity-conversation" class="btn btn--ghost">Request a Clarity Conversation</a>
+      <p class="offer__note">All work starts here.</p>
     </div>
   </section>
 
 
   <!-- ══════════════════════════════
-       PROOF
+       SECONDARY OFFER — INNER GAME
+  ══════════════════════════════ -->
+  <section class="section section--tinted" id="inner-game" aria-labelledby="inner-game-heading">
+    <div class="wrap">
+      <span class="label">Secondary — 1:1 Private Coaching</span>
+      <h2 class="section__headline" id="inner-game-heading">For leaders ready to go deeper.</h2>
+      <p class="section__subhead">The Inner Game of Leadership</p>
+      <p class="offer__body">Matt works privately with a small number of senior leaders who know the next frontier is not informational. It is internal.</p>
+      <p class="offer__body">This is not a generic accountability program. It is identity-first work focused on the beliefs, patterns, and defaults that shape how a leader operates when the stakes are real.</p>
+      <p class="offer__body">For the right leaders, this becomes a disciplined process of closing the gap between who they are, who they intend to be, and what their role now requires.</p>
+      <ul class="offer__list">
+        <li>Selective 1:1 private coaching</li>
+        <li>Built around Awareness → Alignment → Activation</li>
+        <li>Designed for leaders whose external success has outpaced internal integration</li>
+      </ul>
+      <p class="offer__close">If that is the right path, the Clarity Conversation is where we determine it.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       PROOF / TESTIMONIALS
   ══════════════════════════════ -->
   <section class="section section--dark" id="proof" aria-labelledby="proof-heading">
     <div class="wrap">
-      <span class="label label--amber">From a Client</span>
+      <span class="label label--amber">What clients experience</span>
       <blockquote class="proof__anchor" id="proof-heading">There are coaches who give you tools, and then there are coaches who change the way you think. Matt Krall is the latter.</blockquote>
       <p class="proof__attribution">— Executive Coaching Client</p>
 
@@ -1227,25 +1190,10 @@
           <p>"Matt Krall is the kind of coach who sees you clearly, challenges you meaningfully, and sends you back into your work with sharper focus and renewed purpose."</p>
         </div>
       </div>
+
+      <a href="#clarity-conversation" class="btn btn--ghost">Request a Clarity Conversation</a>
     </div>
   </section>
-
-
-  <!-- ══════════════════════════════
-       PRIMARY CTA
-  ══════════════════════════════ -->
-  <section class="cta-block" id="clarity-conversation" aria-labelledby="cta-heading">
-    <div class="wrap">
-      <span class="label" style="text-align: center; display: block;">Request a Clarity Conversation</span>
-      <h2 class="cta-block__headline" id="cta-heading">Not booking is the less honest choice.</h2>
-      <p class="cta-block__support">Not a sales call. A structured diagnostic conversation designed to surface what is actually in the way — clearly, measurably, specifically. You leave with a picture of the gap and a next best move. Whether that involves my work, Elevate You, or another best-fit path — the clarity is yours either way.</p>
-      <!-- Replace href with Pipedrive Meeting Scheduler URL before launch -->
-      <a href="#" class="btn btn--dark" style="padding: 18px 52px; font-size: 0.8rem;">Request a Clarity Conversation</a>
-      <p class="cta-block__note">Matt works with a small number of senior executives and operators. All paths start with this conversation.</p>
-    </div>
-  </section>
-
-  <hr class="divider">
 
 
   <!-- ══════════════════════════════
@@ -1254,19 +1202,27 @@
   <section class="section" id="writing" aria-labelledby="writing-heading">
     <div class="wrap">
       <span class="label">Writing &amp; Thinking</span>
-      <h2 class="section__headline" id="writing-heading" style="margin-bottom: 20px;">On leadership, identity,<br>and what actually holds.</h2>
-      <p class="writing__intro">Occasional writing on the patterns and principles behind the work. Direct, specific, and grounded in twenty-five years at the intersection of strategy and human capacity.</p>
+      <h2 class="section__headline" id="writing-heading" style="margin-bottom: 20px;">On leadership, identity,<br>and what actually holds under pressure.</h2>
+      <p class="writing__intro">Matt writes about the patterns underneath performance — the internal defaults, identity questions, and behavioral dynamics that shape what leaders create around them. This is where he thinks in public: directly, specifically, and without corporate theater.</p>
 
       <div class="writing__grid">
-        <a href="#" class="writing__post">
-          <span class="writing__post-date">Coming Soon</span>
+        <a href="articles/under-pressure.html" class="writing__post">
+          <span class="writing__post-tag">Leadership &amp; Organizational Culture</span>
           <h3 class="writing__post-title">Under pressure, teams don't rise to their goals. They fall to their patterns.</h3>
-          <p class="writing__post-excerpt">Why the question is never capability — and always the system running underneath it.</p>
+          <p class="writing__post-excerpt">Why execution breakdown is often less about strategy — and more about the behaviors pressure exposes.</p>
+          <span class="writing__post-read">Read article →</span>
         </a>
-        <a href="#" class="writing__post">
-          <span class="writing__post-date">Coming Soon</span>
-          <h3 class="writing__post-title">The most expensive ceiling in your organization is the one you don't know you're creating.</h3>
-          <p class="writing__post-excerpt">On the Contagion Rule, and why your internal state sets the limit for everyone in the room.</p>
+        <a href="articles/most-leaders-definition-of-success.html" class="writing__post">
+          <span class="writing__post-tag">Leadership Identity &amp; Alignment</span>
+          <h3 class="writing__post-title">Most leaders are executing against a definition of success they never consciously chose.</h3>
+          <p class="writing__post-excerpt">Why inherited ambition creates misalignment — and why conscious authorship is the beginning of real change.</p>
+          <span class="writing__post-read">Read article →</span>
+        </a>
+        <a href="articles/most-important-leadership-practice.html" class="writing__post writing__post--wide">
+          <span class="writing__post-tag">Leadership Practice &amp; Daily Formation</span>
+          <h3 class="writing__post-title">The most important leadership practice isn't on your to-do list.</h3>
+          <p class="writing__post-excerpt">Why formation beats inspiration — and why the smallest daily shift created the biggest change in how I led.</p>
+          <span class="writing__post-read">Read article →</span>
         </a>
       </div>
 
@@ -1282,19 +1238,36 @@
     <div class="wrap--wide">
       <div class="bridge__inner">
         <div>
-          <span class="label">Organizational Scale</span>
-          <h2 class="bridge__headline" id="bridge-heading">When the individual work is ready to become organizational change — that's where Elevate You comes in.</h2>
+          <span class="label">For Organizations</span>
+          <h2 class="bridge__headline" id="bridge-heading">When the problem is no longer just the leader.</h2>
         </div>
         <div>
-          <p class="bridge__body">The same sequence. The same science. Built for teams, divisions, and entire organizations. A 48-week behavioral installation system that closes the Capacity Gap at scale. Not a workshop. A system that installs behavior in the flow of real work — because behavior that only exists in a training room never makes it to Tuesday.</p>
-          <a href="https://elevate-you.com" class="arrow-link" target="_blank" rel="noopener noreferrer">Learn more about Elevate You</a>
-          <div>
-            <span class="bridge__logo">Elevate You</span>
-          </div>
+          <p class="bridge__body">Sometimes the gap is not your awareness, your intention, or your capability. It is that the organization around you cannot consistently hold the standard under pressure. Priorities blur. Ownership narrows to a few people. Hard conversations happen too late. Too much still depends on the leader to carry the load.</p>
+          <p class="bridge__body">The result is not a lack of effort. It is a system that cannot sustain what you are asking of it.</p>
+          <p class="bridge__body">Elevate You was built for this exact moment — when the work needs to move from the individual to the organization, and behavior needs to hold without constant reinforcement.</p>
+          <a href="https://goelevateyou.com" class="arrow-link" target="_blank" rel="noopener noreferrer">Explore Elevate You</a>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- ══════════════════════════════
+       FINAL CTA — EMBEDDED FORM
+  ══════════════════════════════ -->
+  <section class="cta-block" id="clarity-conversation" aria-labelledby="cta-heading">
+    <div class="wrap">
+      <span class="label" style="text-align: center; display: block;">Request a Clarity Conversation</span>
+      <h2 class="cta-block__headline" id="cta-heading">If the gap is real, start with clarity.</h2>
+      <p class="cta-block__support">The first step is not a commitment. It is an honest diagnosis. Whether that leads to private work, an organizational path, or simply a better decision, the clarity is yours either way.</p>
+      <div class="cta-block__form">
+        <div data-fillout-id="ebbd9T63Qfus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize style="width:100%;"></div>
+      </div>
+      <p class="cta-block__note">Matt works with a small number of senior executives and operators. Every path starts here.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
 
 
   <!-- ══════════════════════════════
@@ -1369,7 +1342,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#the-work">The Work</a></li>
           <li><a href="#writing">Writing</a></li>
-          <li><a href="https://elevate-you.com" target="_blank" rel="noopener noreferrer">Elevate You</a></li>
+          <li><a href="https://goelevateyou.com" target="_blank" rel="noopener noreferrer">Elevate You</a></li>
         </ul>
       </div>
       <div class="footer__bottom">
@@ -1383,8 +1356,8 @@
   <!-- ══════════════════════════════
        SCRIPTS
   ══════════════════════════════ -->
+  <script src="https://server.fillout.com/embed/v1/"></script>
   <script>
-    // Smooth scroll offset for fixed nav
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         var target = document.querySelector(this.getAttribute('href'));
@@ -1393,12 +1366,10 @@
         var navH = document.querySelector('.nav').offsetHeight;
         var top = target.getBoundingClientRect().top + window.scrollY - navH;
         window.scrollTo({ top: top, behavior: 'smooth' });
-        // close mobile drawer if open
         closeDrawer();
       });
     });
 
-    // Mobile nav
     var burger = document.getElementById('burger');
     var drawer = document.getElementById('nav-drawer');
     var drawerOpen = false;
@@ -1420,7 +1391,6 @@
       drawerOpen ? closeDrawer() : openDrawer();
     });
 
-    // Nav shadow on scroll
     var nav = document.querySelector('.nav');
     window.addEventListener('scroll', function() {
       nav.style.boxShadow = window.scrollY > 10

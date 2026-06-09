@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Most Important Leadership Practice Isn't on Your To-Do List — Matt Krall</title>
+  <meta name="description" content="Why formation beats inspiration — and why the smallest daily shift created the biggest change in how I led.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    :root {
+      --cream:       #FAF9F6;
+      --cream-mid:   #F3F0EA;
+      --cream-dark:  #EAE6DD;
+      --ink:         #1A1A18;
+      --charcoal:    #1E2527;
+      --slate:       #555550;
+      --slate-light: #8A8A82;
+      --green:       #2A5A43;
+      --amber:       #B8833E;
+      --rule:        #DDD9D0;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .wrap--wide {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: 64px;
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 40px;
+    }
+    .nav__brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .nav__back {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav__back::before { content: '←'; }
+    .nav__back:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn--dark {
+      background-color: var(--charcoal);
+      color: var(--cream);
+    }
+    .btn--dark:hover { background-color: #111618; }
+
+    .article-header {
+      padding-top: 64px;
+      background-color: var(--charcoal);
+      padding-bottom: 80px;
+    }
+    .article-header__inner {
+      padding-top: 72px;
+    }
+    .article-header__category {
+      display: block;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 28px;
+    }
+    .article-header__title {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 640px;
+    }
+    .article-header__subtitle {
+      font-size: 1.0625rem;
+      color: rgba(250,249,246,0.60);
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 540px;
+      margin-bottom: 40px;
+    }
+    .article-header__byline {
+      font-size: 0.78rem;
+      color: rgba(250,249,246,0.35);
+      letter-spacing: 0.05em;
+    }
+
+    .article-body {
+      padding: 80px 0 100px;
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      color: var(--slate);
+      line-height: 1.9;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .article-body p:first-child {
+      font-size: 1.125rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+    .article-body h2 {
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+      color: var(--ink);
+      margin: 56px 0 20px;
+      line-height: 1.25;
+    }
+    .article-body strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .pull-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-style: italic;
+      color: var(--ink);
+      border-left: 3px solid var(--amber);
+      padding: 4px 0 4px 28px;
+      margin: 48px 0;
+      line-height: 1.6;
+    }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 56px 0;
+    }
+
+    .article-cta {
+      background-color: var(--cream-mid);
+      border-top: 1px solid var(--rule);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .article-cta__label {
+      display: block;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .article-cta__headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: var(--ink);
+      line-height: 1.22;
+      margin-bottom: 16px;
+    }
+    .article-cta__support {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.75;
+      max-width: 440px;
+      margin: 0 auto 36px;
+      font-weight: 300;
+    }
+    .article-cta__note {
+      margin-top: 14px;
+      font-size: 0.75rem;
+      color: var(--slate-light);
+      font-style: italic;
+    }
+
+    .footer {
+      background-color: var(--charcoal);
+      padding: 40px 0;
+    }
+    .footer__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer__brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .footer__copy {
+      font-size: 0.7rem;
+      color: rgba(250,249,246,0.22);
+    }
+
+    @media (max-width: 768px) {
+      .nav__inner { padding: 0 24px; }
+      .wrap { padding: 0 24px; }
+      .wrap--wide { padding: 0 24px; }
+      .article-header__inner { padding-top: 56px; }
+      .footer__inner { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner wrap--wide">
+      <a href="../index.html" class="nav__brand">Matt Krall</a>
+      <a href="../index.html#writing" class="nav__back">Writing</a>
+    </div>
+  </nav>
+
+
+  <header class="article-header">
+    <div class="wrap article-header__inner">
+      <span class="article-header__category">Leadership Practice &amp; Daily Formation</span>
+      <h1 class="article-header__title">The Most Important Leadership Practice Isn't on Your To-Do List</h1>
+      <p class="article-header__subtitle">Why formation beats inspiration — and why the smallest daily shift created the biggest change in how I led.</p>
+      <span class="article-header__byline">By Matt Krall &nbsp;·&nbsp; Founder, Elevate You</span>
+    </div>
+  </header>
+
+
+  <article class="article-body">
+    <div class="wrap">
+
+      <p>I want to tell you about a morning routine I was proud of for years.</p>
+
+      <p>Every day, without fail, I'd sit down and write out my top two or three priorities. Usually something concrete. Something tied to a goal I was driving. Something I could check off and feel good about by end of day.</p>
+
+      <p>It felt disciplined. It felt like what a serious leader does.</p>
+
+      <p>And honestly? For a long time, I didn't question it. Why would you question something that seems to be working?</p>
+
+      <p>But here's the thing about routines — they can look like leadership from the outside while quietly missing the point on the inside.</p>
+
+      <h2>The Moment I Started Looking Inward</h2>
+
+      <p>I was about twelve months into a President role. We'd had a historic year — 48% above plan in an organization that had never cleared 4.3% in three decades. By every external measure, things were good.</p>
+
+      <p>And yet I wasn't fulfilled.</p>
+
+      <p>I remember sitting with that feeling and not quite knowing what to do with it. I'd done the work. I'd hit the number. And still something felt off.</p>
+
+      <p>So instead of looking outward for answers, I turned the lens on myself. I started examining my routines. My rituals. The small daily habits I'd built my leadership around.</p>
+
+      <p>And I asked a question I'd never asked before: are these actually serving me — or am I just going through the motions?</p>
+
+      <p>What I found stopped me.</p>
+
+      <p>My morning practice — the one I was proud of — was essentially a task list dressed up as a ritual. I was planning my day. But I wasn't preparing myself to show up in it.</p>
+
+      <h2>Here's the Difference That Changed Everything</h2>
+
+      <p>Listing priorities answers one question: what do I need to get done today? It's a useful question. I'm not knocking it. But it's a question about output.</p>
+
+      <p>What I wasn't asking — what I'd never really asked — was: how do I want to show up today? And why does that matter?</p>
+
+      <p>That's a completely different question. It's not about your calendar. It's about your character. About the kind of leader you want to be in the work, not just the work you want to produce.</p>
+
+      <p>And I realized I'd been skipping that question entirely.</p>
+
+      <p>I knew how to execute. I knew how to drive a result. But I wasn't being intentional about the person doing the executing. And that gap — that quiet, unexamined gap — was showing up in ways I couldn't see from a task list.</p>
+
+      <blockquote class="pull-quote">"I was planning my day. But I wasn't preparing myself to show up in it."</blockquote>
+
+      <h2>What I Changed — and How Uncomfortable It Was</h2>
+
+      <p>So I shifted the practice. Not dramatically. Just one small change.</p>
+
+      <p>Before I touched my priorities, I'd ask myself how I wanted to show up that day. What did I want to bring into my conversations? What kind of presence did I want to have? What mattered to me about the leader I was being — not just the results I was chasing?</p>
+
+      <p>Some mornings it was about slowing down enough to actually listen. Some mornings it was about holding a high standard without making people feel small. Some mornings it was just about being genuinely present instead of half-distracted by the next thing.</p>
+
+      <p>I still did my priorities. That part didn't go away. But now they were downstream of something more important.</p>
+
+      <p>Here's what I didn't expect: it felt awkward at first.</p>
+
+      <p>I'm wired for execution. Sitting quietly with a question about how I want to be felt soft. A little indulgent, honestly. Like I was spending time on something that wasn't really a leadership task.</p>
+
+      <p>But I stayed with it anyway.</p>
+
+      <h2>Two Weeks In, Something Happened</h2>
+
+      <p>I hadn't told anyone what I was doing. There was no announcement. No new leadership initiative. Just me, quietly changing how I started my mornings.</p>
+
+      <p>About two weeks in, two of my direct reports — separately, without knowing about each other — said something to me that I didn't see coming. They told me I seemed more present in our conversations. That they felt more seen.</p>
+
+      <p>I hadn't changed anything visible. I hadn't restructured meetings or read a new book or attended a workshop. I had just started asking myself a different question before the day began.</p>
+
+      <p>And people were already feeling it.</p>
+
+      <p>That's the moment I understood something I hadn't been able to fully articulate before: the most important leadership work isn't in the big moments. It's in the small, repeated, daily choices about who you're choosing to be before you walk into the room.</p>
+
+      <blockquote class="pull-quote">"The most important leadership work isn't in the big moments. It's in the small, repeated, daily choices about who you're choosing to be before you walk into the room."</blockquote>
+
+      <h2>Why This Matters Beyond One Person's Morning</h2>
+
+      <p>Most organizations I've seen invest heavily in leadership development. And most of it follows the same formula. Bring people together. Inspire them. Send them home energized.</p>
+
+      <p>And it works — for a moment. People leave those offsites genuinely moved. Believing something is going to change. Then Tuesday arrives. And by Tuesday, life has moved on. The inbox is full. The pressure is back. And the inspiration — real as it felt — has nothing to hold onto. No daily practice to carry it. No small, consistent habit to make it stick.</p>
+
+      <p>So it fades.</p>
+
+      <p>Not because the people didn't care. Not because the content wasn't good. But because inspiration without practice is just a feeling with an expiration date.</p>
+
+      <p>You don't become a better leader at the offsite. You become one in the small moments between them.</p>
+
+      <hr class="article-divider">
+
+      <h2>A Simple Question Worth Sitting With</h2>
+
+      <p>I'm not suggesting everyone needs to overhaul their morning. But if you've built a routine that keeps you productive and still leaves you feeling somehow disconnected — from your work, your people, or yourself — it might be worth asking what your routine is actually shaping you into.</p>
+
+      <p>Because discipline is great. Most leaders reading this have plenty of it. The question isn't whether you're disciplined. It's whether your discipline is building the leader you actually want to be — or just helping you get through another day efficiently.</p>
+
+      <p>That's a small distinction. But over time, it's the whole thing.</p>
+
+      <p>If this landed somewhere for you — if you're sitting with a quiet sense that your routines might be serving your output more than your identity — that's worth paying attention to.</p>
+
+      <p>That feeling is usually the beginning of something important.</p>
+
+    </div>
+  </article>
+
+
+  <section class="article-cta">
+    <div class="wrap">
+      <span class="article-cta__label">Request a Clarity Conversation</span>
+      <h2 class="article-cta__headline">If the gap is real, start with clarity.</h2>
+      <p class="article-cta__support">A structured diagnostic conversation designed to surface what is actually in the way — specifically, calmly, and without performance.</p>
+      <a href="../index.html#clarity-conversation" class="btn btn--dark" style="padding: 16px 44px;">Request a Clarity Conversation</a>
+      <p class="article-cta__note">Not a sales call. Every path starts here.</p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="wrap--wide footer__inner">
+      <a href="../index.html" class="footer__brand">Matt Krall</a>
+      <p class="footer__copy">© 2026 Matt Krall. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
