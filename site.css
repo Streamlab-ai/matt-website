@@ -1044,6 +1044,14 @@ main { display: block; }
 .footer__tagline { display: block; }
 .nav__links a[aria-current="page"] { color: var(--ink); border-bottom: 1px solid var(--amber); padding-bottom: 2px; }
 .section { scroll-margin-top: 68px; }
+.byline { font-size: 0.85rem !important; color: var(--slate-light) !important; margin: 0 0 24px !important; font-weight: 400 !important; }
+.byline a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.section--dark .byline a { color: var(--cream); }
+.footer__contact { display: block; margin-top: 12px; font-size: 0.85rem; color: rgba(250,249,246,0.6); }
+.footer__contact a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; }
+.faq__q { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--ink); margin: 30px 0 8px; line-height: 1.35; }
+.faq__q:first-child { margin-top: 0; }
+.faq__a { margin-bottom: 0 !important; }
 @media (max-width: 900px) {
   .about-top { grid-template-columns: 1fr; gap: 36px; }
   .about-top__img { max-width: 420px; }
