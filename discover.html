@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R4MK1FPHH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2R4MK1FPHH');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Do You Want to Show Up? | Four-Question Personal Reflection</title>
+  <meta name="description" content="Four quick questions about where you are, what matters, and how you might like to experience life a little differently. No scores. No labels.">
+  <meta name="author" content="Matt Krall">
+  <!-- Prelaunch preview: remove noindex once Matt approves the copy -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://mattkrall.com/discover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="/ig.css">
+</head>
+<body class="ig">
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">Matt Krall</a>
+    </div>
+  </nav>
+
+  <main class="ig-discover">
+    <div class="wrap">
+      <a class="ig-back" id="back-link" href="/individual-growth">← Back to the Individual Growth Cohort</a>
+      <div id="app" aria-live="polite"></div>
+      <noscript><p>This reflection needs JavaScript to run. You can <a href="/individual-growth">return to the cohort page</a>.</p></noscript>
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    function track(name, params) { try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+    // Preserve source attribution on links back to the landing page
+    var keep = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'ref'];
+    var qs = new URLSearchParams(location.search), carry = new URLSearchParams();
+    keep.forEach(function (k) { if (qs.get(k)) carry.set(k, qs.get(k)); });
+    var LANDING = '/individual-growth' + (carry.toString() ? '?' + carry.toString() : '');
+    document.getElementById('back-link').href = LANDING;
+
+    var QUESTIONS = [
+      { q: 'Which of these feels closest to where you are in life right now?', opts: [
+        'Things are going well, but I know there is another level in me.',
+        'I keep telling myself I will do something differently, but somehow I end up back in the same place.',
+        'From the outside, things look pretty good. I am just not sure everything feels right on the inside.',
+        'I am getting a lot done, but I am not sure how long I want to keep this pace.',
+        'Nothing feels particularly wrong. I am just curious about what else might be possible.'
+      ]},
+      { q: 'Where do you find yourself thinking about this most?', opts: [
+        'At work, especially when I think about where I want to go next.',
+        'With the people closest to me. Those relationships really matter.',
+        'When I am deciding where to spend my time and energy.',
+        'In quieter moments, when I wonder if I am building the life I really want.',
+        'Honestly, it shows up in a few different areas.',
+        'I am still figuring that out.'
+      ]},
+      { q: 'When you think about moments like these, which experience feels most familiar?',
+        context: 'A conversation. An unexpected request. A chance to speak up. A choice about your time. Not dramatic events - everyday moments where how you show up can matter.',
+        opts: [
+        'Sometimes I know what I want to say, but I hold back.',
+        'I find myself saying yes or pushing forward, even when part of me wants something different.',
+        'Sometimes I respond quickly, and later think about how I might have handled it differently.',
+        'I can recognize a familiar pattern, but changing it in the moment is not always easy.',
+        'I am generally happy with how I show up. I am just interested in getting even better.',
+        'It really depends on the situation.'
+      ]},
+      { q: 'Imagine looking back six months from now. What would make you think, “Something really has changed”?', opts: [
+        'I am speaking up and taking chances I might have avoided before.',
+        'I am handling situations differently instead of having the same reactions.',
+        'I am more present with the people who matter to me.',
+        'I am making choices that feel more like mine.',
+        'I have more energy for the life I am working so hard to build.',
+        'I can see how I have grown, not just how much I have accomplished.'
+      ]}
+    ];
+
+    // Personalization copy map (deterministic templates; Q2 is not used in the recap)
+    var Q1 = [
+      'feeling there may be another level in you',
+      'wanting to move beyond a familiar pattern',
+      'that something about your current direction feels worth exploring',
+      'that you are accomplishing a lot and thinking about the pace',
+      'being curious about what else may be possible'
+    ];
+    var Q3 = [
+      'that sometimes you hold back when you want to speak',
+      'that you sometimes keep going or say yes, even when part of you wants something else',
+      'that you sometimes revisit a response afterward',
+      'that changing a familiar pattern in the moment is not always easy',
+      'that you feel good about how you show up and still want to grow',
+      'that how you respond can depend on the situation'
+    ];
+    var Q4 = [
+      { h: 'What might become possible if you spoke up a little more often?',
+        s: 'speaking up and taking chances you might previously have avoided',
+        p: 'Think about an upcoming conversation. What is one thing someone else might see or hear you do differently?' },
+      { h: 'What might change if you met a familiar situation in a new way?',
+        s: 'handling situations differently instead of having the same reactions',
+        p: 'Think of a situation that tends to repeat. What is one small thing you could try differently the next time it happens?' },
+      { h: 'What would it feel like to be more present with the people who matter most?',
+        s: 'being more present with the people who matter to you',
+        p: 'Who is one person you will see this week? What would it look like to give them your full attention for a few minutes?' },
+      { h: 'What might your life look like if more of your choices felt like your own?',
+        s: 'making choices that feel more like yours',
+        p: 'What is one upcoming choice, big or small, where you could pause and ask what you really want?' },
+      { h: 'What would it feel like to have more energy for the life you want?',
+        s: 'having more energy for the things that matter to you',
+        p: 'When could you give something important a little more of your attention or energy?' },
+      { h: 'What might you notice if you looked for growth, not just accomplishment?',
+        s: 'seeing how you have grown, not just how much you have accomplished',
+        p: 'At the end of this week, what is one moment where you could notice how you showed up, not just what you got done?' }
+    ];
+    var FALLBACK = { h: 'What might become possible from here?', body: 'You identified what matters and imagined a different experience.', p: 'What is one small choice you could practice this week?' };
+
+    var STORE = 'ig-discover-answers';
+    var answers = [null, null, null, null];
+    try { var saved = JSON.parse(sessionStorage.getItem(STORE) || 'null'); if (Array.isArray(saved) && saved.length === 4) answers = saved; } catch (e) {}
+    function save() { try { sessionStorage.setItem(STORE, JSON.stringify(answers)); } catch (e) {} }
+
+    var app = document.getElementById('app');
+    var step = -1; // -1 welcome, 0..3 questions, 4 result
+
+    function welcome() {
+      app.innerHTML =
+        '<p class="ig-eyebrow">Four-question personal reflection</p>' +
+        '<h1 class="ig-q" tabindex="-1">How do you want to show up?</h1>' +
+        '<p class="ig-context">Sometimes we know exactly where we want to grow. Other times, we are simply curious about what might be possible.</p>' +
+        '<p class="ig-context">Four quick questions about where you are, what matters, and how you might like to experience life a little differently.</p>' +
+        '<p class="ig-reassure">No scores. No labels. No right or wrong answers. About 2 minutes.</p>' +
+        '<button type="button" class="ig-btn" id="begin">Begin my reflection</button>';
+      document.getElementById('begin').addEventListener('click', function () { track('discovery_start'); go(0); });
+    }
+
+    function question(i) {
+      var Q = QUESTIONS[i];
+      var opts = Q.opts.map(function (o, j) {
+        var sel = answers[i] === j;
+        return '<label class="ig-option' + (sel ? ' is-selected' : '') + '">' +
+          '<input type="radio" name="q' + i + '" value="' + j + '"' + (sel ? ' checked' : '') + '>' +
+          '<span class="ig-option__dot" aria-hidden="true"></span><span>' + esc(o) + '</span></label>';
+      }).join('');
+      app.innerHTML =
+        '<p class="ig-progress">' + (i + 1) + ' of 4</p>' +
+        '<div class="ig-progress__bar" aria-hidden="true"><span style="width:' + ((i + 1) * 25) + '%"></span></div>' +
+        '<h1 class="ig-q" id="qh" tabindex="-1">' + esc(Q.q) + '</h1>' +
+        (Q.context ? '<p class="ig-context">' + esc(Q.context) + '</p>' : '') +
+        '<fieldset class="ig-options" aria-labelledby="qh">' + opts + '</fieldset>' +
+        '<div class="ig-nav">' +
+          '<button type="button" class="ig-btn ig-btn--ghost" id="prev">← Back</button>' +
+          '<button type="button" class="ig-btn" id="next"' + (answers[i] === null ? ' disabled' : '') + '>' + (i === 3 ? 'See my reflection →' : 'Continue →') + '</button>' +
+        '</div>';
+      track('discovery_question_view', { question: i + 1 });
+      app.querySelectorAll('input[type=radio]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          answers[i] = parseInt(r.value, 10); save();
+          app.querySelectorAll('.ig-option').forEach(function (l) { l.classList.toggle('is-selected', l.querySelector('input').checked); });
+          document.getElementById('next').disabled = false;
+        });
+      });
+      document.getElementById('prev').addEventListener('click', function () { go(i - 1); });
+      document.getElementById('next').addEventListener('click', function () {
+        if (answers[i] === null) return;
+        track('discovery_question_answered', { question: i + 1 });
+        go(i + 1);
+      });
+    }
+
+    function result() {
+      var a1 = Q1[answers[0]], a3 = Q3[answers[2]], a4 = Q4[answers[3]];
+      var h, body, p;
+      if (a1 && a3 && a4) {
+        h = a4.h;
+        body = '<p>You mentioned ' + esc(a1) + ' and noted ' + esc(a3) + '.</p><p>You also imagined ' + esc(a4.s) + '.</p>';
+        p = a4.p;
+      } else {
+        h = FALLBACK.h; body = '<p>' + esc(FALLBACK.body) + '</p>'; p = FALLBACK.p;
+      }
+      app.innerHTML =
+        '<div class="ig-result">' +
+        '<p class="ig-eyebrow">Your personal reflection</p>' +
+        '<h1 class="ig-q" tabindex="-1">' + esc(h) + '</h1>' + body +
+        '<div class="ig-carry"><p class="ig-carry__label">One question to carry forward</p><p>' + esc(p) + '</p></div>' +
+        '<a class="ig-btn" id="explore" href="' + LANDING + '#experience">Explore the 20-week experience →</a>' +
+        '<p class="ig-restart"><button type="button" class="ig-link" id="restart">Start the reflection again</button></p>' +
+        '</div>';
+      track('discovery_complete');
+      document.getElementById('explore').addEventListener('click', function () { track('cohort_explore_click'); });
+      document.getElementById('restart').addEventListener('click', function () { answers = [null, null, null, null]; save(); go(-1); });
+    }
+
+    function go(n) {
+      step = Math.max(-1, Math.min(4, n));
+      if (step === -1) welcome(); else if (step === 4) result(); else question(step);
+      var h = app.querySelector('h1'); if (h) h.focus({ preventScroll: true });
+      window.scrollTo(0, 0);
+    }
+    go(-1);
+  })();
+  </script>
+</body>
+</html>
