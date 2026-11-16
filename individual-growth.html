@@ -90,7 +90,7 @@
             <p>Look back on meaningful moments and recognize changes you might otherwise miss.</p>
           </div>
         </div>
-        <p class="ig-note">Live coaching happens in small-group virtual sessions at key points across the 20 weeks, with guided learning and real-life practice in between.</p>
+        <p class="ig-note">Six live virtual coaching sessions with your cohort happen at key points across the 20 weeks, with short guided learning and real-life practice in between.</p>
       </div>
     </section>
 
@@ -192,7 +192,10 @@
       function openForm() {
         panel.hidden = false; cta.setAttribute('aria-expanded', 'true');
         loadFillout();
-        document.getElementById('interest-form-title').focus();
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        panel.classList.remove('is-pop'); void panel.offsetWidth; panel.classList.add('is-pop');
+        panel.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        document.getElementById('interest-form-title').focus({ preventScroll: true });
         track('invitation_cta_click', { choice: 'early_interest' });
       }
       cta.addEventListener('click', openForm);
