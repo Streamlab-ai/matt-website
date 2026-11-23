@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://mattkrall.com/writing</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -38,6 +38,11 @@
   <url>
     <loc>https://mattkrall.com/articles/most-important-leadership-practice.html</loc>
     <lastmod>2026-09-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mattkrall.com/articles/delegate-decisions-under-pressure.html</loc>
+    <lastmod>2026-11-23</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
