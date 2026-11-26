@@ -185,3 +185,24 @@
 .ig-sample__cap { grid-column: 1 / -1; font-size: 0.88rem; color: var(--slate-light); margin: 2px 0 0; }
 @media (max-width: 900px) { .ig-sample { grid-template-columns: 1fr; } .ig-sample__cap { grid-column: auto; } }
 @media (max-width: 560px) { .ig-wb__plan { grid-template-columns: 1fr; } .ig-wb__plan div { border-right: 0; border-bottom: 1px solid var(--rule); } .ig-wb__plan div:last-child { border-bottom: 0; } .ig-wb__row { min-height: 44px; } }
+
+/* uniform CTA system: hero, repeat bands, nav button (desktop), sticky bar (mobile) */
+.ig-cta-band { background: var(--charcoal); color: var(--cream); padding: 30px 0; }
+.ig-cta-band .wrap--wide { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; }
+.ig-cta-band p { margin: 0; font-size: 1.05rem; line-height: 1.5; color: var(--cream); }
+.ig-cta-band strong { font-weight: 500; color: var(--cream); }
+.ig-nav-cta-li { margin-left: 4px; opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.is-cta-on .ig-nav-cta-li { opacity: 1; pointer-events: auto; }
+.nav__links a.ig-nav-cta { color: var(--cream); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: none; min-height: 40px; padding: 8px 20px; }
+.nav__links a.ig-nav-cta:hover { color: var(--cream); }
+.ig-sticky { display: none; }
+@media (max-width: 760px) {
+  .ig-cta-band .wrap--wide { flex-direction: column; align-items: stretch; text-align: center; }
+  .ig-cta-band .ig-btn { width: 100%; }
+  .ig-sticky { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 150; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--charcoal); color: var(--cream); box-shadow: 0 -6px 20px rgba(0,0,0,0.18); transform: translateY(110%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
+  .is-cta-on .ig-sticky { transform: none; visibility: visible; }
+  .ig-sticky p { margin: 0; display: flex; flex-direction: column; line-height: 1.25; }
+  .ig-sticky strong { font-size: 1.1rem; font-weight: 500; color: var(--cream); }
+  .ig-sticky span { font-size: 0.8rem; opacity: .75; }
+  .ig-sticky .ig-btn { width: auto; flex: 0 0 auto; min-height: 44px; padding: 10px 18px; }
+}
