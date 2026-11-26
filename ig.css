@@ -134,3 +134,19 @@
 .ig-price__note { font-size: 0.95rem; color: var(--slate); }
 @media (max-width: 900px) { .ig-proof .wrap--wide { grid-template-columns: repeat(2, minmax(0,1fr)); } .ig-quotes, .ig-weeks { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .ig-quotes, .ig-weeks, .ig-ifthen { grid-template-columns: 1fr; } .ig-ifthen > div { border-right: 0; border-bottom: 1px solid var(--rule); } .ig-ifthen > div:last-child { border-bottom: 0; } }
+
+.ig-sample { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: start; margin-top: 30px; }
+.ig-email { background: #fff; border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); overflow: hidden; }
+.ig-email__head { background: var(--cream-mid); border-bottom: 1px solid var(--rule); padding: 14px 20px; }
+.ig-email__head p { font-size: 0.9rem; color: var(--ink); margin: 2px 0; }
+.ig-email__head span { display: inline-block; min-width: 64px; color: var(--slate-light); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.ig-email__body { padding: 20px 22px 8px; }
+.ig-email__body p { font-size: 0.96rem; color: var(--slate); line-height: 1.65; margin-bottom: 12px; }
+.ig-email__body strong { color: var(--ink); font-weight: 500; }
+.ig-email__video { display: flex; align-items: center; gap: 14px; background: var(--charcoal); color: var(--cream); border-radius: 4px; padding: 18px; margin: 4px 0 14px; font-size: 0.92rem; line-height: 1.4; }
+.ig-email__video strong { color: var(--cream); }
+.ig-email__play { width: 40px; height: 40px; border-radius: 50%; background: var(--amber); color: var(--charcoal); display: grid; place-items: center; font-size: 0.9rem; flex: 0 0 auto; }
+.ig-sample__wb { margin: 0; }
+.ig-sample__wb img { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); background: #fff; }
+.ig-sample__wb figcaption { font-size: 0.88rem; color: var(--slate-light); margin-top: 10px; }
+@media (max-width: 900px) { .ig-sample { grid-template-columns: 1fr; } }
