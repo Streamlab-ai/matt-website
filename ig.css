@@ -78,3 +78,18 @@
   .ig-discover { padding: 104px 0 64px; }
 }
 @media (prefers-reduced-motion: reduce) { .ig-progress__bar span { transition: none; } }
+
+/* Founding cohort page (founding-cohort.html) */
+.ig-hero__cta { margin-top: 36px; }
+.ig-btn--light { background: var(--cream); color: var(--charcoal); border-color: var(--cream); }
+.ig-btn--light:hover { background: var(--amber); border-color: var(--amber); color: var(--charcoal); }
+.ig-hero__fine { font-size: 0.88rem; color: rgba(250,249,246,0.62); margin-top: 14px; }
+.ig-cards--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ig-list { list-style: none; margin: 28px 0 0; padding: 0; max-width: 760px; display: grid; gap: 12px; }
+.ig-list li { position: relative; padding-left: 26px; font-size: 1.02rem; color: var(--slate); line-height: 1.7; font-weight: 300; }
+.ig-list li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 10px; height: 2px; background: var(--amber); }
+.ig-faq { max-width: 760px; margin-top: 28px; }
+.ig-faq h3 { font-size: 1.2rem; color: var(--ink); margin: 26px 0 8px; }
+.ig-faq h3:first-child { margin-top: 0; }
+.ig-faq p { font-size: 1rem; color: var(--slate); line-height: 1.7; font-weight: 300; }
+@media (max-width: 760px) { .ig-cards--three { grid-template-columns: 1fr; } }
