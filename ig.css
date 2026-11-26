@@ -93,3 +93,20 @@
 .ig-faq h3:first-child { margin-top: 0; }
 .ig-faq p { font-size: 1rem; color: var(--slate); line-height: 1.7; font-weight: 300; }
 @media (max-width: 760px) { .ig-cards--three { grid-template-columns: 1fr; } }
+
+.ig-facts { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 32px; }
+.ig-facts > div { background: var(--cream); border: 1px solid var(--rule); border-radius: 4px; padding: 24px; }
+.ig-facts__k { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); font-weight: 500; margin-bottom: 8px; }
+.ig-facts__v { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+.ig-facts__d { font-size: 0.92rem; color: var(--slate); line-height: 1.6; font-weight: 300; }
+.ig-two { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 48px; }
+.ig-two .ig-list { margin-top: 18px; }
+.ig-list strong, .ig-steps strong { color: var(--ink); font-weight: 500; }
+.ig-week { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; margin-top: 28px; }
+.ig-week > div { border-top: 2px solid var(--amber); padding-top: 14px; }
+.ig-week__day { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); font-weight: 500; margin-bottom: 6px; }
+.ig-week p:not(.ig-week__day) { font-size: 0.95rem; color: var(--slate); line-height: 1.6; font-weight: 300; }
+.ig-steps { margin: 24px 0 28px 20px; padding: 0; max-width: 760px; display: grid; gap: 10px; }
+.ig-steps li { font-size: 1.02rem; color: var(--slate); line-height: 1.7; font-weight: 300; padding-left: 6px; }
+@media (max-width: 900px) { .ig-facts { grid-template-columns: repeat(2, minmax(0,1fr)); } .ig-week { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .ig-facts, .ig-two, .ig-week { grid-template-columns: 1fr; } .ig-two { gap: 32px; } }
