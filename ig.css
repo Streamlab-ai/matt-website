@@ -156,6 +156,32 @@
 .ig-banner a { color: var(--charcoal); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; margin-left: 6px; }
 .ig-banner + .ig-hero { padding-top: 104px; }
 .ig-hero__cta--two { display: flex; gap: 12px; flex-wrap: wrap; }
-.ig-btn--outline { background: transparent; color: var(--cream); border-color: rgba(250,249,246,0.5); }
-.ig-btn--outline:hover { background: transparent; border-color: var(--amber); color: var(--amber); }
+.ig-btn--outline { background: var(--amber); color: var(--charcoal); border-color: var(--amber); font-weight: 600; }
+.ig-btn--outline:hover { background: var(--cream); border-color: var(--cream); color: var(--charcoal); }
+.ig-btn--outline::after { content: "\2192"; margin-left: 10px; }
 @media (max-width: 760px) { .ig-banner + .ig-hero { padding-top: 72px; } }
+
+/* sample week: symmetric email + workbook cards */
+.ig-sample { grid-template-columns: 1fr 1fr; align-items: stretch; }
+.ig-sample .ig-email { display: flex; flex-direction: column; }
+.ig-sample .ig-email__body { flex: 1; }
+.ig-wb { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); overflow: hidden; }
+.ig-wb__body { flex: 1; display: flex; flex-direction: column; padding: 20px 22px 18px; }
+.ig-wb__q { font-size: 0.96rem; color: var(--slate); line-height: 1.5; margin-bottom: 14px; }
+.ig-wb__q strong { color: var(--ink); font-weight: 500; }
+.ig-wb__plan { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--rule); border-radius: 4px; margin-bottom: 16px; }
+.ig-wb__plan div { padding: 10px 12px; border-right: 1px solid var(--rule); }
+.ig-wb__plan div:last-child { border-right: 0; }
+.ig-wb__plan b, .ig-wb__row b, .ig-wb__note b { display: block; font: 500 0.72rem 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate-light); margin-bottom: 4px; }
+.ig-wb__plan i, .ig-wb__row i, .ig-wb__note i { font-style: italic; color: #2F4B7C; font-size: 0.92rem; line-height: 1.4; }
+.ig-wb__log { flex: 1; display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 4px; }
+.ig-wb__row { flex: 1; display: grid; grid-template-columns: 38px 26px 1fr; align-items: center; gap: 6px; padding: 4px 12px; min-height: 36px; border-bottom: 1px solid var(--rule); }
+.ig-wb__row:last-child { border-bottom: 0; }
+.ig-wb__row b { margin: 0; }
+.ig-wb__tick { width: 18px; height: 18px; border: 1px solid var(--slate-light); border-radius: 3px; display: grid; place-items: center; font-size: 0.8rem; line-height: 1; color: transparent; }
+.ig-wb__tick.is-on { background: var(--green); border-color: var(--green); color: #fff; }
+.ig-wb__note { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 0.92rem; }
+.ig-wb__note b { display: inline; margin: 0 6px 0 0; }
+.ig-sample__cap { grid-column: 1 / -1; font-size: 0.88rem; color: var(--slate-light); margin: 2px 0 0; }
+@media (max-width: 900px) { .ig-sample { grid-template-columns: 1fr; } .ig-sample__cap { grid-column: auto; } }
+@media (max-width: 560px) { .ig-wb__plan { grid-template-columns: 1fr; } .ig-wb__plan div { border-right: 0; border-bottom: 1px solid var(--rule); } .ig-wb__plan div:last-child { border-bottom: 0; } .ig-wb__row { min-height: 44px; } }
